@@ -1,6 +1,9 @@
 package com.controlsfx.todolist;
 
 import com.controlsfx.todolist.entities.TodoItem;
+import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -8,6 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Controller {
+
+    @FXML
+    private ListView todoListView;
 
     private List<TodoItem> todoItems;
 
@@ -38,6 +44,9 @@ public class Controller {
         todoItems.add(item3);
         todoItems.add(item4);
         todoItems.add(item5);
+
+        todoListView.getItems().setAll(todoItems);
+        todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
 }

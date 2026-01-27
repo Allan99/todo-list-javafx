@@ -11,7 +11,7 @@
             fx:controller="com.controlsfx.todolist.Controller">
 
     <left>
-        <ListView>
+        <ListView fx:id="todoListView">
 
         </ListView>
     </left>
